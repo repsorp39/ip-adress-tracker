@@ -1,0 +1,198 @@
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    @font-face {
+        font-family: 'Manrope-bold';
+        src: url(Manrope/static/Manrope-ExtraBold.ttf);
+    }
+    
+    @font-face {
+        font-family: 'Medium';
+        src: url(Manrope/static/Manrope-Regular.ttf);
+    }
+    
+    @font-face {
+        font-family: 'manrope-SemiBold';
+        src: url(Manrope/static/Manrope-Bold.ttf);
+    }
+    
+    body {
+        --VeryDarkGray: hsl(0, 0%, 17%);
+        --DarkGray: hsl(0, 0%, 59%);
+    }
+    
+    header {
+        padding: 20px;
+        background-image: url(images/pattern-bg-desktop.png);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+    }
+    
+    .intro-title {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 800;
+        color: white;
+        font-family: 'Manrope-bold';
+        margin-top: 40px;
+    }
+    
+    .space-typing {
+        display: flex;
+        width: 525px;
+        margin: auto;
+        cursor: pointer;
+    }
+    
+    #champSaisie {
+        width: 470px;
+        padding: 8px;
+        font-size: 20px;
+        outline: none;
+        border-radius: 8px 0 0 8px;
+        cursor: pointer;
+        border: none;
+    }
+    
+    #champSaisie::placeholder {
+        font-size: 17px;
+    }
+    
+    .icon-arrow {
+        background-color: black;
+        right: 2px;
+        border-radius: 0 8px 8px 0;
+    }
+    
+    .arrow {
+        width: 12px;
+    }
+    
+    aside {
+        position: relative;
+        top: 70px;
+        display: flex;
+        width: 950px;
+        margin: auto;
+        margin-top: 20px !important;
+        padding: 20px;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 10px;
+        z-index: 1000;
+        box-shadow: 5px 5px 5px gray;
+        overflow-x: auto;
+    }
+    
+    .section-title {
+        font-family: 'Medium';
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 1.5px;
+        color: var(--DarkGray);
+        margin-bottom: 8px;
+        color: var(--DarkGray);
+    }
+    
+    .content {
+        font-family: 'manrope-SemiBold';
+        color: var(--VeryDarkGray);
+        font-size: 25px;
+    }
+    
+    section {
+        width: 200px;
+    }
+    
+    .section-box {
+        border-right: 1px solid rgb(151, 151, 151);
+    }
+    
+    #map {
+        min-height: 600px;
+    }
+    
+    .invalid {
+        border: 1.5px solid rgb(240, 86, 111) !important;
+        background-color: rgb(245, 167, 167);
+    }
+    
+    .valid {
+        border: none !important;
+        background-color: white !important;
+    }
+    
+    @media screen and (max-width:992px) {
+        aside {
+            width: 700px;
+            word-wrap: break-word;
+        }
+        #champSaisie {
+            width: 325px;
+        }
+        .space-typing {
+            width: 400px;
+        }
+        section {
+            margin-left: 10px;
+        }
+        #placeID {
+            display: inline;
+        }
+    }
+    
+    @media screen and (max-width:763px) {
+        header {
+            background-image: url(images/pattern-bg-mobile.png);
+            height: 350px;
+        }
+        aside {
+            flex-direction: column;
+            justify-content: center;
+            width: 300px;
+            align-items: center;
+            padding-left: 0;
+            top: 25px;
+            word-wrap: break-word;
+        }
+        .section-box {
+            border: none;
+        }
+        .try {
+            display: flex;
+        }
+        #placeID {
+            margin-left: 3px;
+        }
+        .content {
+            text-align: center;
+        }
+        .section-title {
+            text-align: center;
+        }
+        #placeID {
+            display: inline;
+        }
+    }
+    
+    @media screen and (max-width:438px) {
+        header {
+            width: 450px;
+        }
+        #champSaisie {
+            width: 220px;
+        }
+        .space-typing {
+            width: 290px;
+        }
+        #placeID {
+            display: inline;
+        }
+        #map {
+            width: 450px;
+        }
+    }
