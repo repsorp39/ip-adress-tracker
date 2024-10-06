@@ -1,5 +1,3 @@
-
-
 //Dom required element
 const IP_address = document.getElementById('IP');
 const locating = document.getElementById('location');
@@ -59,7 +57,6 @@ window.onload = async  ()=>{
   await fetchLocationAndSetUpdate();
 }
 
-
 // To enable searching of IP adress
 const champSaisie = document.getElementById('champSaisie');
 const  btnSearch = document.getElementById('search');
@@ -77,7 +74,6 @@ btnSearch.addEventListener('click' ,async ()=>
       if (champSaisie.classList.contains('invalid'))
             champSaisie.classList.remove('invalid');
      await fetchLocationAndSetUpdate(addrIp);
-    
 }
 
 })
